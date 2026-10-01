@@ -1,0 +1,6 @@
+{
+  "name": "AUREA PERFORMANCE",
+  "description": "Centro de treinamento esportivo de alto padrão, biomecânica, tecnologia e performance individualizada.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
