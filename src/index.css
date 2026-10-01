@@ -35,10 +35,10 @@ h1, h2, h3, .font-display {
   background: #334155;
 }
 
-/* Modo Foco - Redução de brilho e ocultação de elementos puramente decorativos */
+/* Modo Foco - Redução de brilho, ocultação de elementos puramente decorativos e estilo tipográfico imersivo */
 .focus-mode-active {
   background-color: #060a12 !important;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .focus-mode-active .ambient-glow,
@@ -47,13 +47,13 @@ h1, h2, h3, .font-display {
 }
 
 .focus-mode-active img {
-  filter: brightness(0.85) contrast(0.95);
-  transition: filter 0.3s ease;
+  filter: brightness(0.8) contrast(0.92);
+  transition: filter 0.35s ease;
 }
 
 .focus-mode-active section {
   background-color: #060a12 !important;
-  border-color: rgba(30, 41, 59, 0.4) !important;
+  border-color: rgba(30, 41, 59, 0.35) !important;
 }
 
 .focus-mode-active .focus-reading-card {
@@ -61,5 +61,61 @@ h1, h2, h3, .font-display {
   border-color: #1e293b !important;
   box-shadow: none !important;
 }
+
+/* === ESTILO TIPOGRÁFICO ESPECIAL PARA LEITURA IMERSIVA === */
+
+/* Ampliação de margens laterais nas seções de conteúdo */
+.focus-mode-active .max-w-7xl {
+  padding-left: clamp(1.75rem, 6vw, 5rem) !important;
+  padding-right: clamp(1.75rem, 6vw, 5rem) !important;
+  transition: padding 0.35s ease;
+}
+
+/* Aumento de entrelinha (line-height) e respiração tipográfica em parágrafos e textos */
+.focus-mode-active p {
+  line-height: 2 !important;
+  letter-spacing: 0.012em !important;
+  color: #E2E8F0 !important;
+  transition: line-height 0.35s ease, letter-spacing 0.35s ease, color 0.35s ease;
+}
+
+/* Parágrafos de destaque com ritmo editorial */
+.focus-mode-active p.text-base,
+.focus-mode-active p.text-lg {
+  font-size: 1.075rem !important;
+  line-height: 2.1 !important;
+  max-width: 68ch !important;
+}
+
+/* Títulos com entrelinha equilibrada e espaçamento aumentado */
+.focus-mode-active h1,
+.focus-mode-active h2,
+.focus-mode-active h3 {
+  line-height: 1.28 !important;
+  letter-spacing: -0.015em !important;
+  margin-bottom: 1.5rem !important;
+  transition: line-height 0.35s ease, margin-bottom 0.35s ease;
+}
+
+/* Citações e depoimentos com recuo e respiração de leitura editorial */
+.focus-mode-active blockquote,
+.focus-mode-active .italic {
+  line-height: 2.1 !important;
+  letter-spacing: 0.015em !important;
+  color: #F1F5F9 !important;
+}
+
+/* Itens de listas com entrelinha e espaçamento vertical confortáveis */
+.focus-mode-active li,
+.focus-mode-active .space-y-3 > *,
+.focus-mode-active .space-y-4 > * {
+  line-height: 1.85 !important;
+}
+
+/* Suavização de cartões para focar na tipografia pura */
+.focus-mode-active [class*="rounded"] {
+  transition: background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
 
 

@@ -53,14 +53,14 @@ export default function App() {
     >
       {/* Focus Mode Temporary Status Banner */}
       {showFocusToast && isFocusMode && (
-        <div className="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-[#091122]/95 border border-blue-500/50 backdrop-blur-md px-4 py-2 rounded-full shadow-2xl flex items-center gap-3 text-xs animate-fadeIn">
+        <div className="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-[#091122]/95 border border-blue-500/50 backdrop-blur-md px-5 py-2.5 rounded-full shadow-2xl flex items-center gap-3.5 text-xs animate-fadeIn">
           <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
           <span className="text-slate-200">
-            Modo Foco Ativado: brilho atenuado e elementos decorativos ocultos.
+            <strong>Modo Foco Tipográfico:</strong> entrelinha ampliada e margens imersivas para leitura limpa.
           </span>
           <button
             onClick={() => setIsFocusMode(false)}
-            className="text-blue-400 hover:text-blue-300 font-semibold underline text-[11px] cursor-pointer"
+            className="text-blue-400 hover:text-blue-300 font-semibold underline text-[11px] cursor-pointer ml-1"
           >
             Desativar
           </button>
